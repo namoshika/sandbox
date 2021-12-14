@@ -5,10 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - { run: "git status", name: "git ss" }
       - uses: actions/setup-node@v2
         with: { node-version: '14' }
       - run: npm install -g bats
       - run: bats -v
-      - name: hoge hoge
-        env: { wawa: "${{secrets.NYAN}}" }
-        run: "echo 1: $wawa 2: $ENV_SEC_NYAN 3: $WANW_ENV_FOO a"
