@@ -9,3 +9,6 @@ jobs:
         with: { node-version: '14' }
       - run: npm install -g bats
       - run: bats -v
+      - name hoge name
+        env: { wawa: ${{secrets.NYAN}} }
+        run: echo 1: $wawa 2: $ENV_SEC_NYAN 3: $WANW_ENV_FOO
