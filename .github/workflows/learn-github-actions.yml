@@ -11,4 +11,4 @@ jobs:
       - run: bats -v
       - name: hoge hoge
         env: { wawa: "${{secrets.NYAN}}" }
-        run: echo 1: $wawa 2: $ENV_SEC_NYAN 3: $WANW_ENV_FOO
+        run: "echo 1: $wawa 2: $ENV_SEC_NYAN 3: $WANW_ENV_FOO"
