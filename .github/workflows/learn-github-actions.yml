@@ -9,4 +9,4 @@ jobs:
         with: { node-version: '14' }
       - run: npm install -g bats
       - run: bats -v
-      - run: echo $pwd
+      - run: echo $pwd && git status && ls -Al
