@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pwd && git status && ls -Al && echo $globalval $jobval $stepval $ENV_SEC_NYAN
-        stepval: stepval
+        env:
+          stepval: stepval
       - name: archive artifacts
         uses: actions/upload-artifact@v2
         with:
